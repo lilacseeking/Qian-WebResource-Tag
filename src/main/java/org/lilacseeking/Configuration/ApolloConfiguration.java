@@ -55,6 +55,7 @@ public class ApolloConfiguration {
      * 6.本地/opt/setting/添加server.properties，添加env=DEV
      * 7.SpringBoot项目配置添加-Denv=dev -Ddev.meta=http://47.95.2.117:8080
      *
+     *
      */
     @PostConstruct
     private void initialize() {
