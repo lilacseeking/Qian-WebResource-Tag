@@ -1,16 +1,41 @@
 package org.lilacseeking.Dao;
 
-import org.lilacseeking.Model.UserPO;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
-import org.springframework.data.jpa.repository.Modifying;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
-import java.util.List;
+import org.lilacseeking.Model.PO.UserPO;
+import org.lilacseeking.Utils.Page;
 
-public interface UserRepository extends JpaRepository<UserPO,Long>,JpaSpecificationExecutor {
+public class UserRepository {
 
-    @Modifying
-    @Query(value = "select userPO from UserPO userPO where userPO.gender=:gender")
-    List listAllUser(@Param(value = "gender")Integer gender);
+    /**
+     * 保存或更新
+     * @return
+     */
+    public Integer saveOrUpdate(UserPO userPO){
+        return 0;
+    }
+
+    /**
+     * 分页查询
+     * @param page
+     * @return
+     */
+    public Page list(Page page){
+        return new Page();
+    }
+
+    /**
+     * 删除用户
+     * @return
+     */
+    public Integer delete(UserPO userPO){
+        return 0;
+    }
+
+    /**
+     * 封存用户
+     * @param userPO
+     * @return
+     */
+    public Integer achieve(UserPO userPO){
+        return 0;
+    }
 }

@@ -1,4 +1,4 @@
-package org.lilacseeking.Controller;
+package org.lilacseeking.Controller.user;
 import com.alibaba.fastjson.JSON;
 import org.lilacseeking.Api.Result;
 import org.lilacseeking.Service.UserService;
