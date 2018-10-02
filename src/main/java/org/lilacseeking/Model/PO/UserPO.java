@@ -4,7 +4,9 @@ import lombok.Data;
 import org.lilacseeking.Model.DTO.LoginDTO;
 import org.lilacseeking.Model.DTO.RegisterDTO;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 /**
  * @Auther: lilacseeking

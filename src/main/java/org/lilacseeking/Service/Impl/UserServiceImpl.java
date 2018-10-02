@@ -1,11 +1,17 @@
 package org.lilacseeking.Service.Impl;
 
 import org.lilacseeking.Dao.UserRepository;
+import org.lilacseeking.Model.DTO.LoginDTO;
+import org.lilacseeking.Model.DTO.RegisterDTO;
 import org.lilacseeking.Model.PO.UserPO;
 import org.lilacseeking.Service.UserService;
+import org.lilacseeking.Utils.MD5Util;
 import org.lilacseeking.Utils.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 
 
 @Service
@@ -14,6 +20,9 @@ public class UserServiceImpl implements UserService {
     @Autowired
     UserRepository userRepository;
 
+    @PersistenceContext
+    EntityManager em;
+
     public Page listAllUser(Page page){
         page =  userRepository.list(new Page());
         return page;
@@ -21,12 +30,17 @@ public class UserServiceImpl implements UserService {
 
     /**
      *
-     * @param userPO
+     * @param registerDTO
      * @return
      */
-    public Integer register(UserPO userPO){
+    public Integer register(RegisterDTO registerDTO){
 //        参数检查
-
+        UserPO userPO = new UserPO(registerDTO);
+        //密码加密
+        String password = userPO.getPassword();
+        MD5Util.generate(password);
+        String yanzhi = "";
+        userRepository.save(userPO);
 //        密码加密
 
 //        持久化数据
@@ -34,7 +48,7 @@ public class UserServiceImpl implements UserService {
         return 1;
     }
 
-    public UserPO login(UserPO userPO){
+    public UserPO login(LoginDTO loginDTO){
         return new UserPO();
     }
 }

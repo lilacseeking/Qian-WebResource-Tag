@@ -1,5 +1,7 @@
 package org.lilacseeking.Service;
 
+import org.lilacseeking.Model.DTO.LoginDTO;
+import org.lilacseeking.Model.DTO.RegisterDTO;
 import org.lilacseeking.Model.PO.UserPO;
 import org.lilacseeking.Utils.Page;
 import org.springframework.stereotype.Service;
@@ -16,10 +18,10 @@ public interface UserService {
 
     /**
      * 用户注册
-     * @param userPO
+     * @param registerDTO
      * @return
      */
-    public Integer register(UserPO userPO);
+    public Integer register(RegisterDTO registerDTO);
 
-    public UserPO login(UserPO userPO);
+    public UserPO login(LoginDTO loginDTO);
 }

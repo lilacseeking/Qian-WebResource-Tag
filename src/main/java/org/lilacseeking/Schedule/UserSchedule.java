@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 @JobHandler(value = "insertUser")
 public class UserSchedule extends IJobHandler {
     @Override
-    public ReturnT<String> execute(String... strings){
+    public ReturnT<String> execute(String strings){
         for (int i = 0; i < 10; i++){
             System.out.println("成功创建第" + i + "个用户");
         }
