@@ -3,6 +3,7 @@ package org.lilacseeking.Model.PO;
 import lombok.Data;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -13,9 +14,8 @@ import java.util.Date;
  */
 @Data
 @MappedSuperclass
-//@Inheritance(strategy = InheritanceType.JOINED)
 @EntityListeners(AuditingEntityListener.class)
-public class BaseEntityPO {
+public class BaseEntityPO implements Serializable {
 
     /**
      * 记录编号
