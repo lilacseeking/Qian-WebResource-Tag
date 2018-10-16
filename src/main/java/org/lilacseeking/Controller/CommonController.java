@@ -28,7 +28,7 @@ public class CommonController {
     @RequestMapping(name = "/register")
     public String register(RegisterDTO registerDTO){
         UserPO userPO = new UserPO(registerDTO);
-        userService.register(userPO);
+        userService.register(registerDTO);
         return "";
     }
     /**
@@ -37,7 +37,7 @@ public class CommonController {
     @RequestMapping(name = "/login")
     public UserPO login(LoginDTO loginDTO){
         UserPO userPO = new UserPO(loginDTO);
-        userPO = userService.login(userPO);
+        userPO = userService.login(loginDTO);
         return userPO;
     }
 }

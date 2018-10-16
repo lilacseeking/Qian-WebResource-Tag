@@ -1,12 +1,10 @@
 package org.lilacseeking.Dao;
 
-
 import org.lilacseeking.Model.PO.UserPO;
 import org.lilacseeking.Utils.Page;
-import org.springframework.stereotype.Service;
-import sun.reflect.generics.repository.AbstractRepository;
+import org.springframework.stereotype.Repository;
 
-
+@Repository
 public class UserRepository extends AbstractRepository<UserPO> {
 
 

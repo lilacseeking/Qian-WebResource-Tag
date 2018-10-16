@@ -6,12 +6,11 @@ import org.lilacseeking.Model.DTO.RegisterDTO;
 import org.lilacseeking.Model.PO.UserPO;
 import org.lilacseeking.Service.UserService;
 import org.lilacseeking.Utils.MD5Util;
-import org.lilacseeking.Utils.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import org.lilacseeking.Utils.Page;
 
 
 @Service
@@ -40,7 +39,7 @@ public class UserServiceImpl implements UserService {
         String password = userPO.getPassword();
         MD5Util.generate(password);
         String yanzhi = "";
-        userRepository.save(userPO);
+        userRepository.saveOrUpdate(userPO);
 //        密码加密
 
 //        持久化数据
