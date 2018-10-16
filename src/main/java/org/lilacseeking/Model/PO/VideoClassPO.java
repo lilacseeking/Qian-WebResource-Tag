@@ -5,7 +5,6 @@ import lombok.Data;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-import java.util.List;
 
 /**
  * @Auther: lilacseeking
@@ -40,7 +39,7 @@ public class VideoClassPO extends BaseEntityPO {
      *  课程标签
      */
     @Column(name = "tage")
-    public List tags;
+    public String tags;
 
     /**
      * 该课程是否免费
