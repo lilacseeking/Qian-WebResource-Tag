@@ -7,6 +7,9 @@ import org.lilacseeking.Model.DTO.RegisterDTO;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * @Auther: lilacseeking
@@ -29,7 +32,7 @@ public class UserPO extends BaseEntityPO {
     /**
      * 密码
      */
-    @Column(name="password", nullable=false, length = 32)
+    @Column(name="password", nullable=false, length = 50)
     private String password;
 
     /**
@@ -47,7 +50,7 @@ public class UserPO extends BaseEntityPO {
     /**
      * 邮箱
      */
-    @Column(name="email", nullable=false, length = 20,unique = true)
+    @Column(name="email", nullable=false, length = 50,unique = true)
     private String email;
 
     /**
@@ -72,7 +75,7 @@ public class UserPO extends BaseEntityPO {
      * 生日
      */
     @Column(name="birthday")
-    private Integer birthday;
+    private Date birthday;
 
     /**
      * 密码加密盐值
@@ -84,10 +87,10 @@ public class UserPO extends BaseEntityPO {
      * 用户注册DTO对象转PO对象
      * @param registerDTO
      */
-    public UserPO(RegisterDTO registerDTO){
+    public UserPO(RegisterDTO registerDTO) throws ParseException {
         this.name = registerDTO.getName();
         this.age = registerDTO.getAge();
-        this.birthday = registerDTO.getBirthday();
+        this.birthday = new SimpleDateFormat("yyyy-MM-dd").parse(registerDTO.getBirthday());
         this.email = registerDTO.getEmail();
         this.gender = registerDTO.getGender();
         this.mobile = registerDTO.getMobile();
