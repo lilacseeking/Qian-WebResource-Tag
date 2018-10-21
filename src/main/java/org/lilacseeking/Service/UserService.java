@@ -1,26 +1,28 @@
 package org.lilacseeking.Service;
 
-import org.lilacseeking.Model.DTO.LoginDTO;
-import org.lilacseeking.Model.DTO.RegisterDTO;
+import org.lilacseeking.Exception.BusinessException;
 import org.lilacseeking.Model.PO.UserPO;
+import org.lilacseeking.Utils.Page;
 import org.springframework.stereotype.Service;
+
+import java.text.ParseException;
 
 @Service
 public interface UserService {
 
     /**
      * 分页查查询所有用户
-     * @param page
+     * @param params
      * @return
      */
-//    public Page listAllUser(Page page);
+    Page listAllUser(String params) throws ParseException;
 
     /**
      * 用户注册
-     * @param registerDTO
+     * @param userPO
      * @return
      */
-    public Integer register(RegisterDTO registerDTO);
+    UserPO register(UserPO userPO);
 
-    public UserPO login(LoginDTO loginDTO);
+    UserPO login(UserPO userPO) throws BusinessException;
 }

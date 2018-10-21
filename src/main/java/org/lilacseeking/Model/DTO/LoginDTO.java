@@ -1,14 +1,16 @@
 package org.lilacseeking.Model.DTO;
 
-import lombok.Getter;
+import lombok.Data;
+
+import java.io.Serializable;
 
 /**
  * @Auther: lilacseeking
  * @Date: 2018/8/27 22:57
  * @Description: 用户登录数据传输对象，不可修改
  */
-@Getter
-public class LoginDTO {
+@Data
+public class LoginDTO implements Serializable {
 
     /**
      * 用户名

@@ -1,8 +1,7 @@
 package org.lilacseeking.Dao;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
 import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import java.util.List;
 
 /**
@@ -12,7 +11,7 @@ import java.util.List;
  */
 public abstract class AbstractRepository<T> {
 
-    @Autowired
+    @PersistenceContext
     protected EntityManager entityManager;
 
     /**

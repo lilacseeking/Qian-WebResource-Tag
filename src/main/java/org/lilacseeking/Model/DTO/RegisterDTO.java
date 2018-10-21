@@ -1,14 +1,17 @@
 package org.lilacseeking.Model.DTO;
 
-import lombok.Getter;
+
+import lombok.Data;
+
+import java.io.Serializable;
 
 /**
  * @Auther: lilacseeking
  * @Date: 2018/8/27 22:56
  * @Description: 用户注册数据传输对象，不可修改
  */
-@Getter
-public class RegisterDTO {
+@Data
+public class RegisterDTO implements Serializable {
     /**
      * 用户名
      */
@@ -47,6 +50,6 @@ public class RegisterDTO {
     /**
      * 生日
      */
-    private Integer birthday;
+    private String birthday;
 
 }

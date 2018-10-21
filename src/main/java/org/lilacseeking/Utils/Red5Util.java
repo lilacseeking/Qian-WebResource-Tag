@@ -3,7 +3,7 @@
 //import org.red5.server.adapter.ApplicationAdapter;
 //import org.red5.server.api.IConnection;
 //
-//public class Red5Util extends ApplicationAdapter {
+//public video Red5Util extends ApplicationAdapter {
 //    @Override
 //    public boolean appConnect(IConnection conn, Object[] params) {
 //        System.out.println("连接");

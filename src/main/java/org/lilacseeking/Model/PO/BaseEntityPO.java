@@ -5,6 +5,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.UUID;
 
 /**
  * @Auther: lilacseeking
@@ -28,7 +29,7 @@ public class BaseEntityPO implements Serializable {
      * 系统唯一码
      */
     @Column(name="guid", nullable=false, length = 50)
-    public String guid;
+    public String guid = UUID.randomUUID().toString().replace("-","").toLowerCase();
     /**
      * 创建时间
      */
@@ -38,7 +39,7 @@ public class BaseEntityPO implements Serializable {
      * 创建人
      */
     @Column(name="creater", nullable=false)
-    public Long creater;
+    public Long creater = 1L;
     /**
      * 修改时间
      */
@@ -68,6 +69,6 @@ public class BaseEntityPO implements Serializable {
      * 归档
      */
     @Column(name="achieve", nullable=false)
-    public Integer achieve;
+    public Integer achieve = 0;
 
 }
