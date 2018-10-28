@@ -105,5 +105,13 @@ public class MD5Util {
 		}
 	}
 
+	public static void main(String[] args) {
+		String password = "123456";
+		String input = "123456";
+		System.out.println("普通MD5密文：" + MD5Util.MD5(password));
+		System.out.println("加盐加密密文：" + MD5Util.generate(password));
+		System.out.println("验证结果：" + MD5Util.verify(password,MD5Util.MD5(password)));
 
+
+	}
 }

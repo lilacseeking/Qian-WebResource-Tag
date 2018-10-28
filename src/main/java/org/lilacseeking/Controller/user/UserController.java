@@ -1,6 +1,9 @@
 package org.lilacseeking.Controller.user;
 
+import io.swagger.annotations.ApiOperation;
 import org.lilacseeking.Api.Result;
+import org.lilacseeking.Model.DTO.LoginDTO;
+import org.lilacseeking.Model.PO.UserPO;
 import org.lilacseeking.Service.UserService;
 import org.lilacseeking.Utils.Page;
 import org.lilacseeking.Utils.ResponseUtil;
@@ -10,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletResponse;
+import java.util.List;
 
 @RestController
 @RequestMapping(value = "/user")
@@ -19,6 +23,13 @@ public class UserController {
 
     @Autowired
     private ResponseUtil responseUtil;
+
+    /**
+     * 分页查询用户列表
+     * @param params
+     * @param response
+     */
+
     @RequestMapping(value = "/list")
     public void getUserById(@RequestBody String params , HttpServletResponse response){
         Result result = new Result();
@@ -38,5 +49,39 @@ public class UserController {
 //            result.setSuccess(false);
 //            result.setMessage("没有查询到用户");
 //        }
+    }
+
+    /**
+     * 重置密码 and 修改密码
+     * @param loginDTO
+     * @param response
+     */
+    @RequestMapping(value = "/resetPassword")
+    @ApiOperation(value = "/resetPassword",notes = "修改密码")
+    public void resetPassword(@RequestBody LoginDTO loginDTO,HttpServletResponse response){
+        // 输入原密码，修改密码
+        // 输入电话号码，接收短信，重置密码，暂支持修改密码
+        UserPO userPO = new UserPO(loginDTO);
+        try{
+            userPO = userService.resetPassword(userPO,loginDTO.getNewPassword());
+            responseUtil.putSuccess(userPO);
+        }catch(Exception e){
+            responseUtil.putError(e);
+        }
+        responseUtil.writeMessage(response);
+    }
+
+    /**
+     * 封存（删除）用户，保留数据
+     * @param Id
+     * @param response
+     */
+    @RequestMapping(value = "/achieveUser")
+    public void achieveUser(@RequestBody List Id, HttpServletResponse response){
+        try{
+
+        }catch (Exception e){
+
+        }
     }
 }

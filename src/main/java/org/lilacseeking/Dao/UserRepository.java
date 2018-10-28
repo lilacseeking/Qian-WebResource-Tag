@@ -37,6 +37,7 @@ public class UserRepository extends AbstractRepository<UserPO> {
     public Page list(Page page, String filter) throws ParseException {
         // 参数组装
         JSONObject value = JSONObject.parseObject(filter);
+        String name = value.getString("name");
         String email = value.getString("email");
         String mobile = value.getString("mobile");
         String username = value.getString("username");
@@ -46,6 +47,10 @@ public class UserRepository extends AbstractRepository<UserPO> {
         Integer age =  StringUtils.isBlank(value.getString("age"))?null:Integer.valueOf(value.getString("age"));
         Integer achieve =  StringUtils.isBlank(value.getString("achieve"))?null:Integer.valueOf(value.getString("achieve"));
         JPAQueryBase query = new JPAQuery<>(entityManager).from(qUserPO);
+        // 姓名查询
+        if (!StringUtils.isBlank(name)){
+            query.where(qUserPO.name.eq(name));
+        }
         // 手机号查询
         if (!StringUtils.isBlank(mobile)){
             query.where(qUserPO.mobile.eq(mobile));
@@ -63,7 +68,7 @@ public class UserRepository extends AbstractRepository<UserPO> {
             query.where(qUserPO.birthday.eq(birthday));
         }
         // 创建日期
-        if (gmtCreateList.size()>0){
+        if (null != gmtCreateList && gmtCreateList.size()>0){
             query.where(qUserPO.gmtCreate.in(new SimpleDateFormat("yyyy-MM-dd").parse(gmtCreateList.get(0).toString())
                     ,new SimpleDateFormat("yyyy-MM-dd").parse(gmtCreateList.get(1).toString())));
         }

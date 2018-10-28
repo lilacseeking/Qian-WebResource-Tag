@@ -9,7 +9,8 @@ public enum  ErrorCodeEumn {
 
     //参数错误
     MOBILE_NOT_NULL("1001","手机号不能为空"),
-    PASSWORD_NOT_CORRECT("1002","密码输入错误");
+    PASSWORD_NOT_CORRECT("1002","密码输入错误"),
+    NEW_PASSWORD_NOT_NULL("1003","新密码不可为空");
 
 
     private String code;
