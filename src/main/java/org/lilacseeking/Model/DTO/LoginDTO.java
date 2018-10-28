@@ -31,4 +31,10 @@ public class LoginDTO implements Serializable {
      * 手机
      */
     private String mobile;
+
+    /**
+     * 新密码（重置密码时使用）
+     */
+    private String newPassword;
+
 }
