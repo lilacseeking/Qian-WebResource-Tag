@@ -7,10 +7,21 @@ package org.lilacseeking.Eumns;
  */
 public enum  ErrorCodeEumn {
 
-    //参数错误
+    // 参数错误
     MOBILE_NOT_NULL("1001","手机号不能为空"),
     PASSWORD_NOT_CORRECT("1002","密码输入错误"),
-    NEW_PASSWORD_NOT_NULL("1003","新密码不可为空");
+    NEW_PASSWORD_NOT_NULL("1003","新密码不可为空"),
+    // 系统错误
+    UNKNOWN_ERROR("2001","未知异常"),
+
+    // 业务错误
+    MOBILE_CODE_SEND_FAILED("3001","手机验证码发送失败")
+
+
+
+
+
+    ;
 
 
     private String code;

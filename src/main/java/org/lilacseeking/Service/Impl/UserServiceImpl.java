@@ -1,14 +1,20 @@
 package org.lilacseeking.Service.Impl;
 
 import com.alibaba.fastjson.JSONObject;
+import com.aliyuncs.dysmsapi.model.v20170525.SendSmsResponse;
+import com.aliyuncs.exceptions.ClientException;
 import com.ctrip.framework.apollo.core.utils.StringUtils;
 import org.lilacseeking.Dao.UserRepository;
 import org.lilacseeking.Eumns.ErrorCodeEumn;
+import org.lilacseeking.Eumns.SmsTemltateEnum;
 import org.lilacseeking.Exception.BusinessException;
+import org.lilacseeking.Model.DTO.LoginDTO;
 import org.lilacseeking.Model.PO.UserPO;
+import org.lilacseeking.Service.RedisService;
 import org.lilacseeking.Service.UserService;
 import org.lilacseeking.Utils.MD5Util;
 import org.lilacseeking.Utils.Page;
+import org.lilacseeking.Utils.SmsUtil;
 import org.lilacseeking.Utils.StringUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,6 +28,8 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     UserRepository userRepository;
+    @Autowired
+    RedisService redisService;
 
     public Page listAllUser(String params) throws ParseException {
         JSONObject value = JSONObject.parseObject(params).getJSONObject("params");
@@ -66,6 +74,32 @@ public class UserServiceImpl implements UserService {
         return userPOByMobile;
     }
 
+    /**
+     * 发送登录短信验证码
+     * @param loginDTO
+     * @return
+     */
+    public SendSmsResponse sendMobileCode(LoginDTO loginDTO){
+        // 生成6位随机数字
+        String verifyCode = String.valueOf((int)((Math.random()*9+1)*100000));
+        redisService.saveSmsCode(loginDTO.getMobile(),verifyCode);
+        try {
+            SendSmsResponse sendSmsResponse = SmsUtil.sendSms(loginDTO.getMobile(), SmsTemltateEnum.USER_LOGIN, verifyCode);
+            return sendSmsResponse;
+        } catch (ClientException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+    /**
+     * 手机验证码登录
+     * @param loginDTO
+     * @return
+     */
+    public UserPO mobileLogin(LoginDTO loginDTO){
+
+        return new UserPO();
+    }
     /**
      * 修改密码 and 重置密码
      * @param userPO

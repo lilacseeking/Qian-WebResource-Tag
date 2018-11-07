@@ -106,7 +106,23 @@ public class ResponseUtil {
             logger.warn("异常信息为: ", th);
         }
     }
-
+    /**
+     * 组装返回客户断的消息体
+     *
+     * @param code
+     * @param message
+     * @param content
+     */
+    public void put(String code, String message, Object content) {
+        try {
+            LinkedHashMap<String, Object> resultMap = getMessageMap();
+            resultMap.put("code", code);
+            resultMap.put("errorMsg", message);
+            resultMap.put("content", content);
+        } catch (Throwable th) {
+            logger.warn("异常信息为: ", th);
+        }
+    }
     /**
      * 默认成功信息
      */
@@ -166,7 +182,7 @@ public class ResponseUtil {
      * @param content 内容
      */
     public void putError(String msg, Object content) {
-        putError(1, msg, content);
+        putError("1", msg, content);
     }
 
     /**
@@ -178,7 +194,7 @@ public class ResponseUtil {
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("errorCode",errorCode);
         jsonObject.put("errorMsg",errorMsg);
-        putError(1, errorCode, jsonObject);
+        putError("1", errorCode, jsonObject);
     }
 
     /**
@@ -188,7 +204,7 @@ public class ResponseUtil {
      * @param msg     描述
      * @param content 内容
      */
-    public void putError(int code, String msg, Object content) {
+    public void putError(String code, String msg, Object content) {
         put(code, msg, content);
     }
 

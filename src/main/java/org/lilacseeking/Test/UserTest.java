@@ -23,6 +23,16 @@ public class UserTest {
     public final Logger logger = LoggerFactory.getLogger(UserTest.class);
 
     public void register(){
+//        {
+//                "email": "xianjin@gmail.com",
+//                "mobile": "18803830004",
+//                "password": "123456",
+//                "username": "程序大牛",
+//                "name":"张秋月",
+//                "age":"29",
+//                "gender":"0",
+//                "birthday":"1993-11-06"
+//        }
         //随机生成测试数据
         String randomBirthday = RandomValueUtil.getRandomBirthday("1980-01-01", "2010-01-01");
         RegisterDTO registerDTO = new RegisterDTO();

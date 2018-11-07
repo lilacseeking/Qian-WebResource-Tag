@@ -1,7 +1,10 @@
 package org.lilacseeking.Controller;
 
+import com.aliyuncs.dysmsapi.model.v20170525.SendSmsResponse;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.lilacseeking.Eumns.ErrorCodeEumn;
+import org.lilacseeking.Exception.BusinessException;
 import org.lilacseeking.Model.DTO.LoginDTO;
 import org.lilacseeking.Model.DTO.RegisterDTO;
 import org.lilacseeking.Model.PO.UserPO;
@@ -63,5 +66,44 @@ public class CommonController {
             responseUtil.putError(e);
         }
         responseUtil.writeMessage(res);
+    }
+
+    /**
+     * 手机验证码登录
+     */
+    @ApiOperation(value = "手机验证码登录" ,notes = "用户登录")
+    @RequestMapping(value = "/mobileLogin" ,method = RequestMethod.POST)
+    public void mobileLogin(@RequestBody LoginDTO loginDTO,HttpServletResponse res){
+        try{
+            UserPO userPO = userService.mobileLogin(loginDTO);
+            responseUtil.putSuccess(userPO);
+        }catch (Exception e){
+            e.printStackTrace();
+            responseUtil.putError(e);
+        }
+        responseUtil.writeMessage(res);
+    }
+
+    /**
+     * 发送手机验证码
+     */
+    @ApiOperation(value = "发送手机验证码" ,notes = "用户登录")
+    @RequestMapping(value = "/sendMobileCode" ,method = RequestMethod.POST)
+    public void sendMobileCode(@RequestBody LoginDTO loginDTO,HttpServletResponse res){
+        SendSmsResponse sendSmsResponse = userService.sendMobileCode(loginDTO);
+        if (!sendSmsResponse.getCode().equals("OK")){
+            throw new BusinessException(ErrorCodeEumn.MOBILE_CODE_SEND_FAILED.getName());
+        }
+        responseUtil.putSuccess();
+        responseUtil.writeMessage(res);
+    }
+
+    /**
+     * 统一异常处理
+     */
+    @ApiOperation(value = "测试异常统一处理程序" ,notes = "异常处理")
+    @RequestMapping(value = "/testException" ,method = RequestMethod.POST)
+    public void testException(@RequestBody String loginDTO,HttpServletResponse res){
+        throw new BusinessException(ErrorCodeEumn.NEW_PASSWORD_NOT_NULL.getName());
     }
 }
