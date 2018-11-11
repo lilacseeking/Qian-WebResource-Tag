@@ -10,23 +10,36 @@ import com.aliyuncs.dysmsapi.model.v20170525.SendSmsResponse;
 import com.aliyuncs.exceptions.ClientException;
 import com.aliyuncs.profile.DefaultProfile;
 import com.aliyuncs.profile.IClientProfile;
+import org.lilacseeking.Configuration.ConstantProperties;
 import org.lilacseeking.Eumns.SmsTemltateEnum;
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class SmsUtil {
+
+    static ConstantProperties constantProperties;
+
+    private static SmsUtil smsUtil = null;
+
+    public SmsUtil(ConstantProperties constantProperties) {
+        this.constantProperties = constantProperties;
+    }
+
+    public SmsUtil(){
+
+    }
 
     //产品名称:云通信短信API产品,开发者无需替换
     static final String product = "Dysmsapi";
     //产品域名,开发者无需替换
     static final String domain = "dysmsapi.aliyuncs.com";
 
-    // TODO 此处需要替换成开发者自己的AK(在阿里云访问控制台寻找)
-    static final String accessKeyId = "LTAISZ9ZBGTZ2yNa";
-    static final String accessKeySecret = "wrAdHzJjWXMYe8bYYAABvXNJZgDCaE";
 
-    public static SendSmsResponse sendSms(String mobile,SmsTemltateEnum template,String verifyCode) throws ClientException {
+
+    private static String accessKeyId = "";
+    private static String accessKeySecret = "";
+
+    public SendSmsResponse sendSms(String mobile,SmsTemltateEnum template,String verifyCode) throws ClientException {
 
         //可自助调整超时时间
         System.setProperty("sun.net.client.defaultConnectTimeout", "10000");
@@ -64,7 +77,7 @@ public class SmsUtil {
     }
 
 
-    public static QuerySendDetailsResponse querySendDetails(String bizId) throws ClientException {
+    public QuerySendDetailsResponse querySendDetails(String bizId) throws ClientException {
 
         //可自助调整超时时间
         System.setProperty("sun.net.client.defaultConnectTimeout", "10000");
@@ -93,6 +106,15 @@ public class SmsUtil {
         QuerySendDetailsResponse querySendDetailsResponse = acsClient.getAcsResponse(request);
 
         return querySendDetailsResponse;
+    }
+
+    public static SmsUtil getInstance(ConstantProperties constantProperties){
+         accessKeyId = constantProperties.getSms().getAccessKeyId();
+         accessKeySecret = constantProperties.getSms().getAccessKeySecret();
+        if (smsUtil==null){
+            smsUtil = new SmsUtil(constantProperties );
+        }
+        return smsUtil;
     }
 
 //    public static void SendSms()throws ClientException, InterruptedException{

@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.aliyuncs.dysmsapi.model.v20170525.SendSmsResponse;
 import com.aliyuncs.exceptions.ClientException;
 import com.ctrip.framework.apollo.core.utils.StringUtils;
+import org.lilacseeking.Configuration.ConstantProperties;
 import org.lilacseeking.Dao.UserRepository;
 import org.lilacseeking.Eumns.ErrorCodeEumn;
 import org.lilacseeking.Eumns.SmsTemltateEnum;
@@ -30,6 +31,8 @@ public class UserServiceImpl implements UserService {
     UserRepository userRepository;
     @Autowired
     RedisService redisService;
+    @Autowired
+    ConstantProperties constantProperties;
 
     public Page listAllUser(String params) throws ParseException {
         JSONObject value = JSONObject.parseObject(params).getJSONObject("params");
@@ -84,7 +87,9 @@ public class UserServiceImpl implements UserService {
         String verifyCode = String.valueOf((int)((Math.random()*9+1)*100000));
         redisService.saveSmsCode(loginDTO.getMobile(),verifyCode);
         try {
-            SendSmsResponse sendSmsResponse = SmsUtil.sendSms(loginDTO.getMobile(), SmsTemltateEnum.USER_LOGIN, verifyCode);
+//            SendSmsResponse sendSmsResponse = SmsUtil.sendSms(loginDTO.getMobile(), SmsTemltateEnum.USER_LOGIN, verifyCode);
+            SmsUtil.getInstance(constantProperties);
+            SendSmsResponse sendSmsResponse = SmsUtil.getInstance(constantProperties).sendSms(loginDTO.getMobile(), SmsTemltateEnum.USER_LOGIN, verifyCode);
             return sendSmsResponse;
         } catch (ClientException e) {
             e.printStackTrace();

@@ -139,11 +139,11 @@
             <version>1.0.0</version>
         </dependency>
         <!-- 引入processor-->
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.boot</groupId>-->
-            <!--<artifactId>spring-boot-configuration-processor</artifactId>-->
-            <!--<optional>true</optional>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
         <!--任务调度xxl-job-->
         <dependency>
             <groupId>com.xuxueli</groupId>
@@ -169,6 +169,12 @@
             <artifactId>red5-server</artifactId>
             <version>1.0.10-M9</version>
             <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>RELEASE</version>
+            <scope>compile</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.apache.mina/mina-core -->
         <!--<dependency>-->
