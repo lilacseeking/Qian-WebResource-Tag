@@ -15,7 +15,6 @@ import javax.persistence.Table;
 @Data
 @Entity
 @Table(name = "course_user")
-//@Inheritance(strategy = InheritanceType.JOINED)
 public class CourseUserPO extends BaseEntityPO {
 
     /**

@@ -14,9 +14,8 @@ import javax.persistence.Table;
  */
 @Data
 @Entity
-//@Inheritance(strategy = InheritanceType.JOINED)
 @Table(name = "class_chat")
-public class ClassChatPO extends BaseEntityPO {
+public class CourseChatPO extends BaseEntityPO {
 
     /**
      * 用户Id

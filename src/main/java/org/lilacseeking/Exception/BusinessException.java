@@ -5,7 +5,8 @@ package org.lilacseeking.Exception;
  * @Date: 2018/10/21 00:42
  * @Description:
  */
-public class BusinessException extends Exception {
+public class BusinessException extends RuntimeException {
+
     private int code;
 
     private Object content;

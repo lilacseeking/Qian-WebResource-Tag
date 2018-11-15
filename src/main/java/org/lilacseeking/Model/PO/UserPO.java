@@ -20,7 +20,6 @@ import java.util.Date;
 @Data
 @Entity
 @Table(name = "user")
-//@Inheritance(strategy = InheritanceType.JOINED)
 public class UserPO extends BaseEntityPO {
 
     /**

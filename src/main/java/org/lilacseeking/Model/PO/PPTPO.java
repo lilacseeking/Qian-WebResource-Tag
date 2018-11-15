@@ -15,7 +15,6 @@ import javax.persistence.Table;
 @Data
 @Entity
 @Table(name = "ppt")
-//@Inheritance(strategy = InheritanceType.JOINED)
 public class PPTPO extends BaseEntityPO {
     /**
      * 图片名称

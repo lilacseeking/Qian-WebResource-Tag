@@ -1,28 +1,18 @@
 package org.lilacseeking.Test;
 
-import junit.framework.TestCase;
+import org.junit.Test;
+
+import static org.junit.Assert.*;
 
 /**
  * @Auther: lilacseeking
- * @Date: 2018/10/20 20:16
+ * @Date: 2018/11/6 21:50
  * @Description:
  */
-public class UserTestTest extends TestCase {
+public class UserTestTest {
 
-    public void testRegister() {
-//        for (int i = 0;i<10 ;i++){
-//            new Thread(new Runnable() {
-//                @Override
-//                public void run() {
-//                    new UserTest().register();
-//                }
-//            }).start();
-//        }
-//        ExecutorService exec = Executors.newFixedThreadPool(20);
-//        exec.execute(new ASyncUserRegister());
-        for (int i = 0;i<10000 ;i++){
-            new UserTest().register();
-        }
-
+    @Test
+    public void register() {
+        new UserTest().register();
     }
 }

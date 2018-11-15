@@ -2,44 +2,28 @@ package org.lilacseeking.Eumns;
 
 /**
  * @Auther: lilacseeking
- * @Date: 2018/10/21 00:44
+ * @Date: 2018/11/6 23:45
  * @Description:
  */
-public enum  ErrorCodeEumn {
-
-    // 参数错误
-    MOBILE_NOT_NULL("1001","手机号不能为空"),
-    MOBILE_CODE_ERROR("1002","验证码错误"),
-    PASSWORD_NOT_CORRECT("1003","密码输入错误"),
-    NEW_PASSWORD_NOT_NULL("1004","新密码不可为空"),
-    // 系统错误
-    UNKNOWN_ERROR("2001","未知异常"),
-
-    // 业务错误
-    MOBILE_CODE_SEND_FAILED("3001","手机验证码发送失败")
-
-
-
-
-
-    ;
-
+public enum SmsTemltateEnum {
+    RESET_PWD("SMS_149400110","重置密码"),
+    USER_LOGIN("SMS_149405100","用户登录"),
+    USER_REGISTER("SMS_149400104","注册验证");
 
     private String code;
     private String name;
 
-    ErrorCodeEumn (String code,String name){
+    SmsTemltateEnum(String code, String name) {
         this.code = code;
         this.name = name;
     }
 
-
-    public static String getErrorCodeEumnCode(String code) {
+    public static String getSmsTemltateEnumCode(String code) {
         if (code == null) {
             return null;
         }
-        ErrorCodeEumn[] typeEnums = ErrorCodeEumn.values();
-        for (ErrorCodeEumn typeEnum : typeEnums) {
+        SmsTemltateEnum[] typeEnums = SmsTemltateEnum.values();
+        for (SmsTemltateEnum typeEnum : typeEnums) {
             if (typeEnum.code.equals(code)) {
                 return typeEnum.name;
             }
@@ -47,12 +31,12 @@ public enum  ErrorCodeEumn {
         return null;
     }
 
-    public static ErrorCodeEumn getErrorCodeEumn(String codeName) {
+    public static SmsTemltateEnum getSmsTemltateEnum(String codeName) {
         if (codeName == null) {
             return null;
         }
-        ErrorCodeEumn[] typeEnums = ErrorCodeEumn.values();
-        for (ErrorCodeEumn typeEnum : typeEnums) {
+        SmsTemltateEnum[] typeEnums = SmsTemltateEnum.values();
+        for (SmsTemltateEnum typeEnum : typeEnums) {
             if (typeEnum.name.equals(codeName)) {
                 return typeEnum;
             }
@@ -60,19 +44,18 @@ public enum  ErrorCodeEumn {
         return null;
     }
 
-    public static String getErrorCodeEumnName(String codeName) {
+    public static String getSmsTemltateEnumName(String codeName) {
         if (codeName == null) {
             return null;
         }
-        ErrorCodeEumn[] typeEnums = ErrorCodeEumn.values();
-        for (ErrorCodeEumn typeEnum : typeEnums) {
+        SmsTemltateEnum[] typeEnums = SmsTemltateEnum.values();
+        for (SmsTemltateEnum typeEnum : typeEnums) {
             if (typeEnum.name.equals(codeName)) {
                 return typeEnum.name;
             }
         }
         return null;
     }
-
 
     public String getCode() {
         return code;

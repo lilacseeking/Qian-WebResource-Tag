@@ -28,6 +28,11 @@ public class LoginDTO implements Serializable {
     private String email;
 
     /**
+     * 手机登录验证码
+     */
+    private String verifyCode;
+
+    /**
      * 手机
      */
     private String mobile;

@@ -1,6 +1,6 @@
 package org.lilacseeking.Service.video;
 
-import org.lilacseeking.Model.PO.VideoClassPO;
+import org.lilacseeking.Model.PO.VideoCoursePO;
 
 /**
  * @Auther: lilacseeking
@@ -11,8 +11,8 @@ public interface VideoClassService {
 
     /**
      * 新增课程
-     * @param videoClassPO
+     * @param videoCoursePO
      * @return
      */
-    VideoClassPO addVideoClass(VideoClassPO videoClassPO);
+    VideoCoursePO addVideoClass(VideoCoursePO videoCoursePO);
 }

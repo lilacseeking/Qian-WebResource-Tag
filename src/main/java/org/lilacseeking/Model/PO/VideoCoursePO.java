@@ -17,7 +17,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "video_class")
 //@Inheritance(strategy = InheritanceType.JOINED)
-public class VideoClassPO extends BaseEntityPO {
+public class VideoCoursePO extends BaseEntityPO {
     /**
      * 课程名称
      */
@@ -54,7 +54,7 @@ public class VideoClassPO extends BaseEntityPO {
     @Column(name = "discount",nullable = false, precision = 2, scale = 1)
     public Double discount = 0.0;
 
-    public VideoClassPO(VideoClassDTO videoClassDTO){
+    public VideoCoursePO(VideoClassDTO videoClassDTO){
 
         this.name = videoClassDTO.getName();
         this.teacher = videoClassDTO.getTeacher();
@@ -64,11 +64,11 @@ public class VideoClassPO extends BaseEntityPO {
         this.discount = videoClassDTO.getDiscount();
     }
 
-    public VideoClassPO(){
+    public VideoCoursePO(){
 
     }
 
-    public VideoClassPO(String name, Long teacher, String description, String tags, Boolean isFree, Double discount) {
+    public VideoCoursePO(String name, Long teacher, String description, String tags, Boolean isFree, Double discount) {
         this.name = name;
         this.teacher = teacher;
         this.description = description;
