@@ -8,6 +8,7 @@ import org.lilacseeking.Exception.BusinessException;
 import org.lilacseeking.Model.DTO.LoginDTO;
 import org.lilacseeking.Model.DTO.RegisterDTO;
 import org.lilacseeking.Model.PO.UserPO;
+import org.lilacseeking.Model.VO.UserInfoVO;
 import org.lilacseeking.Service.UserService;
 import org.lilacseeking.Utils.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+
 import javax.servlet.http.HttpServletResponse;
 
 /**
@@ -52,15 +54,15 @@ public class CommonController {
 //        result.setData(register);
     }
     /**
-     * 用户登录
+     * 用户密码登录
      */
     @ApiOperation(value = "用户登录" ,notes = "用户登录")
-    @RequestMapping(value = "/login" ,method = RequestMethod.POST)
-    public void login(@RequestBody LoginDTO loginDTO,HttpServletResponse res){
+    @RequestMapping(value = "/loginByPwd" ,method = RequestMethod.POST)
+    public void loginByPwd(@RequestBody LoginDTO loginDTO,HttpServletResponse res){
         UserPO userPO = new UserPO(loginDTO);
         try{
-            userPO = userService.login(userPO);
-            responseUtil.putSuccess(userPO);
+            UserInfoVO userInfoVO = userService.loginByPwd(userPO);
+            responseUtil.putSuccess(userInfoVO);
         }catch (Exception e){
             e.printStackTrace();
             responseUtil.putError(e);
@@ -75,8 +77,8 @@ public class CommonController {
     @RequestMapping(value = "/mobileLogin" ,method = RequestMethod.POST)
     public void mobileLogin(@RequestBody LoginDTO loginDTO,HttpServletResponse res){
         try{
-            UserPO userPO = userService.mobileLogin(loginDTO);
-            responseUtil.putSuccess(userPO);
+            UserInfoVO userInfoVO = userService.mobileLogin(loginDTO);
+            responseUtil.putSuccess(userInfoVO);
         }catch (Exception e){
             e.printStackTrace();
             responseUtil.putError(e);

@@ -3,7 +3,7 @@ package org.lilacseeking.Controller.video;
 import com.querydsl.jpa.JPAQueryBase;
 import com.querydsl.jpa.impl.JPAQuery;
 import org.lilacseeking.Model.DTO.VideoClassDTO;
-import org.lilacseeking.Model.PO.VideoClassPO;
+import org.lilacseeking.Model.PO.VideoCoursePO;
 import org.lilacseeking.Service.video.VideoClassService;
 import org.lilacseeking.Utils.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,15 +36,15 @@ public class VideoController {
      */
     @RequestMapping(value = "/addVideoClass")
     public void AddVideoClass(@RequestBody VideoClassDTO videoClassDTO, HttpServletResponse response){
-        VideoClassPO videoClassPO = null;
+        VideoCoursePO videoCoursePO = null;
         try {
-            videoClassPO = new VideoClassPO(videoClassDTO);
-            videoClassPO = videoClassService.addVideoClass(videoClassPO);
+            videoCoursePO = new VideoCoursePO(videoClassDTO);
+            videoCoursePO = videoClassService.addVideoClass(videoCoursePO);
 
         }catch (Exception e){
             e.printStackTrace();
         }
-        responseUtil.putSuccess(videoClassPO);
+        responseUtil.putSuccess(videoCoursePO);
         responseUtil.writeMessage(response);
     }
 

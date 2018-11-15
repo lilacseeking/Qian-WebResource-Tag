@@ -79,19 +79,19 @@ public class ConstantProperties {
 
     public static class Oss{
         /**
-         *
+         * 外部域名
          */
         public String endpoint;
         /**
-         *
+         * AccessKey
          */
         public String accessKeyId;
         /**
-         *
+         * AccessKeySecret
          */
         public String accessKeySecret;
         /**
-         *
+         * 存储空间
          */
         public String bucketName;
 

@@ -15,7 +15,6 @@ import javax.persistence.Table;
 @Entity
 @Data
 @Table(name = "video_content")
-//@Inheritance(strategy = InheritanceType.JOINED)
 public class VideoContentPO extends BaseEntityPO {
     /**
      * 课程名称

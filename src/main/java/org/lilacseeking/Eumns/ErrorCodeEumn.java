@@ -9,8 +9,9 @@ public enum  ErrorCodeEumn {
 
     // 参数错误
     MOBILE_NOT_NULL("1001","手机号不能为空"),
-    PASSWORD_NOT_CORRECT("1002","密码输入错误"),
-    NEW_PASSWORD_NOT_NULL("1003","新密码不可为空"),
+    MOBILE_CODE_ERROR("1002","验证码错误"),
+    PASSWORD_NOT_CORRECT("1003","密码输入错误"),
+    NEW_PASSWORD_NOT_NULL("1004","新密码不可为空"),
     // 系统错误
     UNKNOWN_ERROR("2001","未知异常"),
 

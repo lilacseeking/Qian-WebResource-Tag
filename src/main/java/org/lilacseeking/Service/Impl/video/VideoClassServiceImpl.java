@@ -1,7 +1,7 @@
 package org.lilacseeking.Service.Impl.video;
 
 import org.lilacseeking.Dao.video.VideoClassRepository;
-import org.lilacseeking.Model.PO.VideoClassPO;
+import org.lilacseeking.Model.PO.VideoCoursePO;
 import org.lilacseeking.Service.video.VideoClassService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,10 +19,10 @@ public class VideoClassServiceImpl implements VideoClassService {
 
     /**
      * 保存课程信息
-     * @param videoClassPO
+     * @param videoCoursePO
      * @return
      */
-    public VideoClassPO addVideoClass(VideoClassPO videoClassPO){
-        return videoClassRepository.saveOrUpdate(videoClassPO);
+    public VideoCoursePO addVideoClass(VideoCoursePO videoCoursePO){
+        return videoClassRepository.saveOrUpdate(videoCoursePO);
     }
 }

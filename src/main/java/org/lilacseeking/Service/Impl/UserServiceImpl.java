@@ -11,12 +11,10 @@ import org.lilacseeking.Eumns.SmsTemltateEnum;
 import org.lilacseeking.Exception.BusinessException;
 import org.lilacseeking.Model.DTO.LoginDTO;
 import org.lilacseeking.Model.PO.UserPO;
+import org.lilacseeking.Model.VO.UserInfoVO;
 import org.lilacseeking.Service.RedisService;
 import org.lilacseeking.Service.UserService;
-import org.lilacseeking.Utils.MD5Util;
-import org.lilacseeking.Utils.Page;
-import org.lilacseeking.Utils.SmsUtil;
-import org.lilacseeking.Utils.StringUtil;
+import org.lilacseeking.Utils.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -61,12 +59,12 @@ public class UserServiceImpl implements UserService {
     }
 
     /**
-     * 用户登录
+     * 用户密码登录
      * @param userPO
      * @return
      * @throws BusinessException
      */
-    public UserPO login(UserPO userPO) throws BusinessException {
+    public UserInfoVO loginByPwd(UserPO userPO) throws BusinessException {
         if (StringUtils.isBlank(userPO.getMobile())){
             throw new BusinessException(ErrorCodeEumn.MOBILE_NOT_NULL.getName());
         }
@@ -74,7 +72,11 @@ public class UserServiceImpl implements UserService {
         if (!MD5Util.MD5(userPO.getPassword()).equals(userPOByMobile.getPassword())){
             throw new BusinessException(ErrorCodeEumn.PASSWORD_NOT_CORRECT.getName());
         }
-        return userPOByMobile;
+        // 保存用户信息token
+        UserInfoVO userInfoVO = new UserInfoVO();
+        BeanCopyUtil.copyPropertiesIgnoreNull(userPO,userInfoVO);
+        userInfoVO = redisService.saveUserToken(userInfoVO);
+        return userInfoVO;
     }
 
     /**
@@ -101,9 +103,22 @@ public class UserServiceImpl implements UserService {
      * @param loginDTO
      * @return
      */
-    public UserPO mobileLogin(LoginDTO loginDTO){
+    public UserInfoVO mobileLogin(LoginDTO loginDTO){
+        String smsCode = redisService.getSmsCode(loginDTO.getMobile());
+        // 验证验证码输入是否正确
+        if (!loginDTO.getVerifyCode().equals(smsCode)){
+            throw new BusinessException(ErrorCodeEumn.MOBILE_CODE_ERROR.getName());
+        }
+        // Redis缓存置该用户验证码信息置为失效
+         redisService.invalid(loginDTO.getMobile());
+        UserPO userPO = userRepository.getUserPOByMobile(loginDTO.getMobile());
+        // 保存session
 
-        return new UserPO();
+        // 保存用户信息token
+        UserInfoVO userInfoVO = new UserInfoVO();
+        BeanCopyUtil.copyPropertiesIgnoreNull(userPO,userInfoVO);
+        userInfoVO = redisService.saveUserToken(userInfoVO);
+        return userInfoVO;
     }
     /**
      * 修改密码 and 重置密码
@@ -130,7 +145,7 @@ public class UserServiceImpl implements UserService {
     }
 
     /**
-     *
+     * 封存（注销）用户
      * @param list
      * @return
      */

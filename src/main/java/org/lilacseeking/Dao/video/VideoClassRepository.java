@@ -1,7 +1,7 @@
 package org.lilacseeking.Dao.video;
 
 import org.lilacseeking.Dao.AbstractRepository;
-import org.lilacseeking.Model.PO.VideoClassPO;
+import org.lilacseeking.Model.PO.VideoCoursePO;
 import org.springframework.stereotype.Repository;
 
 import javax.transaction.Transactional;
@@ -12,9 +12,9 @@ import javax.transaction.Transactional;
  * @Description:课程持久化类
  */
 @Repository
-public class VideoClassRepository extends AbstractRepository<VideoClassPO> {
+public class VideoClassRepository extends AbstractRepository<VideoCoursePO> {
     @Transactional
-    public VideoClassPO saveOrUpdate(VideoClassPO videoClassPO){
-        return entityManager.merge(videoClassPO);
+    public VideoCoursePO saveOrUpdate(VideoCoursePO videoCoursePO){
+        return entityManager.merge(videoCoursePO);
     }
 }

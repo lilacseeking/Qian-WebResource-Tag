@@ -15,7 +15,6 @@ import javax.persistence.Table;
 @Data
 @Entity
 @Table(name = "friend_list")
-//@Inheritance(strategy = InheritanceType.JOINED)
 public class FriendList extends BaseEntityPO {
     /**
      *

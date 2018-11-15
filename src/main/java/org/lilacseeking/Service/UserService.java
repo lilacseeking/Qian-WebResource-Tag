@@ -4,6 +4,7 @@ import com.aliyuncs.dysmsapi.model.v20170525.SendSmsResponse;
 import org.lilacseeking.Exception.BusinessException;
 import org.lilacseeking.Model.DTO.LoginDTO;
 import org.lilacseeking.Model.PO.UserPO;
+import org.lilacseeking.Model.VO.UserInfoVO;
 import org.lilacseeking.Utils.Page;
 import org.springframework.stereotype.Service;
 
@@ -28,12 +29,12 @@ public interface UserService {
     UserPO register(UserPO userPO);
 
     /**
-     * 用户登录
+     * 用户密码登录
      * @param userPO
      * @return
      * @throws BusinessException
      */
-    UserPO login(UserPO userPO) throws BusinessException;
+    UserInfoVO loginByPwd(UserPO userPO) throws BusinessException;
 
     /**
      * 发送验证码
@@ -47,7 +48,7 @@ public interface UserService {
      * @param loginDTO
      * @return
      */
-    UserPO mobileLogin(LoginDTO loginDTO);
+    UserInfoVO mobileLogin(LoginDTO loginDTO);
 
     /**
      * 修改密码 and 重置密码
