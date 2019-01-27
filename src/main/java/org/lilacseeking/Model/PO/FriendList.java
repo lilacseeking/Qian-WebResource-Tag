@@ -1,6 +1,8 @@
 package org.lilacseeking.Model.PO;
 
+import lombok.Builder;
 import lombok.Data;
+import lombok.experimental.Accessors;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -13,6 +15,8 @@ import javax.persistence.Table;
  * 用户的好友列表
  */
 @Data
+@Builder
+@Accessors(chain = true)
 @Entity
 @Table(name = "friend_list")
 public class FriendList extends BaseEntityPO {

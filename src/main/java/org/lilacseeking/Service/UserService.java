@@ -1,10 +1,9 @@
 package org.lilacseeking.Service;
 
 import com.aliyuncs.dysmsapi.model.v20170525.SendSmsResponse;
-import org.lilacseeking.Exception.BusinessException;
 import org.lilacseeking.Model.DTO.LoginDTO;
-import org.lilacseeking.Model.PO.UserPO;
-import org.lilacseeking.Model.VO.UserInfoVO;
+import org.lilacseeking.Model.DTO.RegisterDTO;
+import org.lilacseeking.Model.VO.UserBasicInfoDTO;
 import org.lilacseeking.Utils.Page;
 import org.springframework.stereotype.Service;
 
@@ -23,18 +22,17 @@ public interface UserService {
 
     /**
      * 用户注册
-     * @param userPO
+     * @param registerDTO
      * @return
      */
-    UserPO register(UserPO userPO);
+    UserBasicInfoDTO register(RegisterDTO registerDTO);
 
     /**
      * 用户密码登录
-     * @param userPO
+     * @param loginDTO
      * @return
-     * @throws BusinessException
      */
-    UserInfoVO loginByPwd(UserPO userPO) throws BusinessException;
+    UserBasicInfoDTO loginByPwd(LoginDTO loginDTO);
 
     /**
      * 发送验证码
@@ -48,15 +46,14 @@ public interface UserService {
      * @param loginDTO
      * @return
      */
-    UserInfoVO mobileLogin(LoginDTO loginDTO);
+    UserBasicInfoDTO mobileLogin(LoginDTO loginDTO);
 
     /**
      * 修改密码 and 重置密码
-     * @param userPO
-     * @param pwd
+     * @param loginDTO 包含用户基本信息
      * @return
      */
-    UserPO resetPassword(UserPO userPO,String pwd) throws BusinessException;
+    UserBasicInfoDTO resetPassword(LoginDTO loginDTO);
 
     /**
      * 封存用户

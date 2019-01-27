@@ -1,6 +1,8 @@
 package org.lilacseeking.Model.PO;
 
+import lombok.Builder;
 import lombok.Data;
+import lombok.experimental.Accessors;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -12,6 +14,8 @@ import javax.persistence.Table;
  * @Description:
  */
 @Data
+@Builder
+@Accessors(chain = true)
 @Entity
 @Table(name = "teacher_info")
 public class TeacherPO extends BaseEntityPO{

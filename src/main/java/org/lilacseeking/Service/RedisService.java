@@ -1,6 +1,6 @@
 package org.lilacseeking.Service;
 
-import org.lilacseeking.Model.VO.UserInfoVO;
+import org.lilacseeking.Model.VO.UserBasicInfoDTO;
 
 /**
  * @Auther: lilacseeking
@@ -24,7 +24,7 @@ public interface RedisService {
     void invalid(String mobile);
 
     // 保存登录token
-    UserInfoVO saveUserToken(UserInfoVO userInfoVO);
+    UserBasicInfoDTO saveUserToken(UserBasicInfoDTO userBasicInfoDTO);
 
     String getUserToken();
 }

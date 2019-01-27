@@ -1,10 +1,11 @@
 package org.lilacseeking.Model.PO;
 
+import lombok.Builder;
 import lombok.Data;
+import lombok.experimental.Accessors;
+import org.lilacseeking.Eumns.YesOrNoEnum;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * @Auther: lilacseeking 未验证
@@ -14,18 +15,23 @@ import javax.persistence.Table;
  */
 @Entity
 @Data
+@Builder
+@Accessors(chain = true)
 @Table(name = "video_content")
 public class VideoContentPO extends BaseEntityPO {
+
+    @Column(name = "course_id")
+    public Long courseId;
     /**
      * 课程名称
      */
-    @Column(name = "cource_name")
-    public String courceName;
+    @Column(name = "course_name")
+    public String courseName;
 
     /**
      * 章节名称
      */
-    @Column(name = "chapter_nane")
+    @Column(name = "chapter_name")
     public String chapterNane;
 
     /**
@@ -44,7 +50,8 @@ public class VideoContentPO extends BaseEntityPO {
      * 是否免费
      */
     @Column(name = "is_free")
-    public String isFree;
+    @Enumerated(EnumType.STRING)
+    public YesOrNoEnum isFree;
 
     /**
      * 视频时长

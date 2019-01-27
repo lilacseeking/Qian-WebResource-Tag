@@ -3,7 +3,7 @@ package org.lilacseeking.Controller.user;
 import io.swagger.annotations.ApiOperation;
 import org.lilacseeking.Api.Result;
 import org.lilacseeking.Model.DTO.LoginDTO;
-import org.lilacseeking.Model.PO.UserPO;
+import org.lilacseeking.Model.VO.UserBasicInfoDTO;
 import org.lilacseeking.Service.UserService;
 import org.lilacseeking.Utils.Page;
 import org.lilacseeking.Utils.ResponseUtil;
@@ -42,13 +42,6 @@ public class UserController {
             responseUtil.putError(e);
         }
         responseUtil.writeMessage(response);
-//        if (page.getResultList().size()>0){
-//            result.setSuccess(true);
-//            result.setData(page);
-//        }else{
-//            result.setSuccess(false);
-//            result.setMessage("没有查询到用户");
-//        }
     }
 
     /**
@@ -61,13 +54,8 @@ public class UserController {
     public void resetPassword(@RequestBody LoginDTO loginDTO,HttpServletResponse response){
         // 输入原密码，修改密码
         // 输入电话号码，接收短信，重置密码，暂支持修改密码
-        UserPO userPO = new UserPO(loginDTO);
-        try{
-            userPO = userService.resetPassword(userPO,loginDTO.getNewPassword());
-            responseUtil.putSuccess(userPO);
-        }catch(Exception e){
-            responseUtil.putError(e);
-        }
+        UserBasicInfoDTO userBasicInfoDTO = userService.resetPassword(loginDTO);
+        responseUtil.putSuccess(userBasicInfoDTO);
         responseUtil.writeMessage(response);
     }
 

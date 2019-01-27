@@ -1,5 +1,6 @@
 package org.lilacseeking.Controller;
 
+import com.alibaba.fastjson.JSON;
 import com.aliyuncs.dysmsapi.model.v20170525.SendSmsResponse;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -7,10 +8,11 @@ import org.lilacseeking.Eumns.ErrorCodeEumn;
 import org.lilacseeking.Exception.BusinessException;
 import org.lilacseeking.Model.DTO.LoginDTO;
 import org.lilacseeking.Model.DTO.RegisterDTO;
-import org.lilacseeking.Model.PO.UserPO;
-import org.lilacseeking.Model.VO.UserInfoVO;
+import org.lilacseeking.Model.VO.UserBasicInfoDTO;
 import org.lilacseeking.Service.UserService;
 import org.lilacseeking.Utils.ResponseUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,28 +32,21 @@ import javax.servlet.http.HttpServletResponse;
 public class CommonController {
 
     @Autowired
-    UserService userService;
+    private UserService userService;
     @Autowired
-    ResponseUtil responseUtil;
+    private ResponseUtil responseUtil;
+    @Autowired
+    private static Logger LOGGER = LoggerFactory.getLogger(CommonController.class);
     /**
      * 用户注册
      */
     @ApiOperation(value = "用户注册" ,notes = "用户注册")
     @RequestMapping(value = "/register" ,method = RequestMethod.POST)
     public void register(@RequestBody RegisterDTO registerDTO, HttpServletResponse res){
-        UserPO register = null;
-        try {
-            UserPO userPO  = new UserPO(registerDTO);
-            register = userService.register(userPO);
-        } catch (Exception e) {
-            e.printStackTrace();
-            responseUtil.putError(e);
-        }
+        LOGGER.info("用户注册接口调用，用户注册DTO对象：{}", JSON.toJSONString(registerDTO));
+        UserBasicInfoDTO register = userService.register(registerDTO);
         responseUtil.putSuccess(register);
         responseUtil.writeMessage(res);
-//        result.setSuccess(true);
-//        result.setCode("0");
-//        result.setData(register);
     }
     /**
      * 用户密码登录
@@ -59,14 +54,8 @@ public class CommonController {
     @ApiOperation(value = "用户登录" ,notes = "用户登录")
     @RequestMapping(value = "/loginByPwd" ,method = RequestMethod.POST)
     public void loginByPwd(@RequestBody LoginDTO loginDTO,HttpServletResponse res){
-        UserPO userPO = new UserPO(loginDTO);
-        try{
-            UserInfoVO userInfoVO = userService.loginByPwd(userPO);
-            responseUtil.putSuccess(userInfoVO);
-        }catch (Exception e){
-            e.printStackTrace();
-            responseUtil.putError(e);
-        }
+        UserBasicInfoDTO userBasicInfoDTO = userService.loginByPwd(loginDTO);
+        responseUtil.putSuccess(userBasicInfoDTO);
         responseUtil.writeMessage(res);
     }
 
@@ -77,8 +66,8 @@ public class CommonController {
     @RequestMapping(value = "/mobileLogin" ,method = RequestMethod.POST)
     public void mobileLogin(@RequestBody LoginDTO loginDTO,HttpServletResponse res){
         try{
-            UserInfoVO userInfoVO = userService.mobileLogin(loginDTO);
-            responseUtil.putSuccess(userInfoVO);
+            UserBasicInfoDTO userBasicInfoDTO = userService.mobileLogin(loginDTO);
+            responseUtil.putSuccess(userBasicInfoDTO);
         }catch (Exception e){
             e.printStackTrace();
             responseUtil.putError(e);
