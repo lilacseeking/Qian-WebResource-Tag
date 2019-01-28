@@ -1,0 +1,62 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "org.lilacseeking.Configuration.ConstantProperties",
+      "name": "lilacseeking",
+      "type": "org.lilacseeking.Configuration.ConstantProperties"
+    },
+    {
+      "sourceType": "org.lilacseeking.Configuration.ConstantProperties",
+      "name": "lilacseeking.oss",
+      "sourceMethod": "getOss()",
+      "type": "org.lilacseeking.Configuration.ConstantProperties$Oss"
+    },
+    {
+      "sourceType": "org.lilacseeking.Configuration.ConstantProperties",
+      "name": "lilacseeking.sms",
+      "sourceMethod": "getSms()",
+      "type": "org.lilacseeking.Configuration.ConstantProperties$Sms"
+    },
+    {
+      "sourceType": "org.lilacseeking.Configuration.ApolloConfiguration",
+      "name": "redis.cache",
+      "type": "org.lilacseeking.Configuration.ApolloConfiguration"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "org.lilacseeking.Configuration.ApolloConfiguration",
+      "name": "redis.cache.cluster-nodes",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.lilacseeking.Configuration.ApolloConfiguration",
+      "defaultValue": 0,
+      "name": "redis.cache.command-timeout",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "org.lilacseeking.Configuration.ApolloConfiguration",
+      "name": "redis.cache.config",
+      "description": "@ApolloConfig用来自动注入Config对象",
+      "type": "com.ctrip.framework.apollo.Config"
+    },
+    {
+      "sourceType": "org.lilacseeking.Configuration.ApolloConfiguration",
+      "defaultValue": 0,
+      "name": "redis.cache.expire-seconds",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "org.lilacseeking.Configuration.ApolloConfiguration",
+      "name": "redis.cache.some-list",
+      "type": "java.util.List<java.lang.String>"
+    },
+    {
+      "sourceType": "org.lilacseeking.Configuration.ApolloConfiguration",
+      "name": "redis.cache.some-map",
+      "type": "java.util.Map<java.lang.String,java.lang.String>"
+    }
+  ]
+}

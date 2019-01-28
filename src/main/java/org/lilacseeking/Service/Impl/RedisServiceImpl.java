@@ -1,7 +1,7 @@
 package org.lilacseeking.Service.Impl;
 
 import com.alibaba.fastjson.JSON;
-import org.lilacseeking.Model.VO.UserInfoVO;
+import org.lilacseeking.Model.VO.UserBasicInfoDTO;
 import org.lilacseeking.Service.RedisService;
 import org.redisson.api.RMap;
 import org.redisson.api.RedissonClient;
@@ -47,11 +47,11 @@ public class RedisServiceImpl implements RedisService {
     }
 
     // 保存登录token
-    public UserInfoVO saveUserToken(UserInfoVO userInfoVO){
-        userInfoVO.setToken(UUID.randomUUID().toString().replace("-","").toLowerCase());
+    public UserBasicInfoDTO saveUserToken(UserBasicInfoDTO userBasicInfoDTO){
+        userBasicInfoDTO.setToken(UUID.randomUUID().toString().replace("-","").toLowerCase());
         RMap<String, String> map = redissonClient.getMap(QIAN_MANAGE_USER_INFO);
-        map.fastPut(userInfoVO.getUsername(), JSON.toJSONString(userInfoVO));
-        return userInfoVO;
+        map.fastPut(userBasicInfoDTO.getUsername(), JSON.toJSONString(userBasicInfoDTO));
+        return userBasicInfoDTO;
     }
 
     public String getUserToken(){

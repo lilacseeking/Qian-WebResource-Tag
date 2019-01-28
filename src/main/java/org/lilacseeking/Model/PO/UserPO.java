@@ -1,14 +1,12 @@
 package org.lilacseeking.Model.PO;
 
+import lombok.Builder;
 import lombok.Data;
-import org.lilacseeking.Model.DTO.LoginDTO;
-import org.lilacseeking.Model.DTO.RegisterDTO;
+import lombok.experimental.Accessors;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -18,6 +16,8 @@ import java.util.Date;
  * 此表为用户基本信息表，仅保存用户基本信息。
  */
 @Data
+@Builder
+@Accessors(chain = true)
 @Entity
 @Table(name = "user")
 public class UserPO extends BaseEntityPO {
@@ -62,13 +62,13 @@ public class UserPO extends BaseEntityPO {
      * 年龄
      */
     @Column(name="age")
-    private Integer age;
+    private Integer age = 0;
 
     /**
      * 性别
      */
     @Column(name="gender")
-    private Integer gender;
+    private Integer gender = 0;
 
     /**
      * 生日
@@ -80,39 +80,6 @@ public class UserPO extends BaseEntityPO {
      * 密码加密盐值
      */
     @Column(name="yanzhi", nullable=false, length = 32)
-    private String yanzhi;
-
-    /**
-     * 用户注册DTO对象转PO对象
-     * @param registerDTO
-     */
-    public UserPO(RegisterDTO registerDTO) throws ParseException {
-        this.name = registerDTO.getName();
-        this.age = registerDTO.getAge();
-        this.birthday = new SimpleDateFormat("yyyy-MM-dd").parse(registerDTO.getBirthday());
-        this.email = registerDTO.getEmail();
-        this.gender = registerDTO.getGender();
-        this.mobile = registerDTO.getMobile();
-        this.password = registerDTO.getPassword();
-        this.username = registerDTO.getUsername();
-    }
-
-    /**
-     * 用户登录DTO对象转PO对象
-     * @param loginDTO
-     */
-    public UserPO(LoginDTO loginDTO){
-        this.email = loginDTO.getEmail();
-        this.mobile = loginDTO.getMobile();
-        this.password = loginDTO.getPassword();
-        this.username = loginDTO.getUsername();
-    }
-
-    /**
-     * 无参构造方法
-     */
-    public UserPO(){
-
-    }
+    private String yanzhi = "YouAreMySunshine";
 
 }

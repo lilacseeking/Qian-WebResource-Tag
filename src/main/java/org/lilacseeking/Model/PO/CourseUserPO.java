@@ -1,6 +1,8 @@
 package org.lilacseeking.Model.PO;
 
+import lombok.Builder;
 import lombok.Data;
+import lombok.experimental.Accessors;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -13,6 +15,8 @@ import javax.persistence.Table;
  * 此表为视频和用户之间的中间表，表示用户学习的课程以及学习情况。
  */
 @Data
+@Builder
+@Accessors(chain = true)
 @Entity
 @Table(name = "course_user")
 public class CourseUserPO extends BaseEntityPO {

@@ -431,14 +431,7 @@
 
 ```json
 {
-  "email": "xianjin@gmail.com",
-  "mobile": "18803830004",
-  "password": "123456",
-  "username": "程序大牛",
-  "name":"张秋月",
-  "age":"29",
-  "gender":"0",
-  "birthday":"1993-11-06"
+
 }
 ```
 

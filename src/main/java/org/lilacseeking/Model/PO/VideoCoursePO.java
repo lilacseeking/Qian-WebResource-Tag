@@ -1,7 +1,8 @@
 package org.lilacseeking.Model.PO;
 
+import lombok.Builder;
 import lombok.Data;
-import org.lilacseeking.Model.DTO.VideoClassDTO;
+import lombok.experimental.Accessors;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,6 +15,8 @@ import javax.persistence.Table;
  * 此表为视频课程表，显示课程的详细信息
  */
 @Data
+@Builder
+@Accessors(chain = true)
 @Entity
 @Table(name = "video_class")
 //@Inheritance(strategy = InheritanceType.JOINED)
@@ -53,27 +56,4 @@ public class VideoCoursePO extends BaseEntityPO {
      */
     @Column(name = "discount",nullable = false, precision = 2, scale = 1)
     public Double discount = 0.0;
-
-    public VideoCoursePO(VideoClassDTO videoClassDTO){
-
-        this.name = videoClassDTO.getName();
-        this.teacher = videoClassDTO.getTeacher();
-        this.description = videoClassDTO.getDescription();
-        this.tags = videoClassDTO.getTags();
-        this.isFree = videoClassDTO.getIsFree();
-        this.discount = videoClassDTO.getDiscount();
-    }
-
-    public VideoCoursePO(){
-
-    }
-
-    public VideoCoursePO(String name, Long teacher, String description, String tags, Boolean isFree, Double discount) {
-        this.name = name;
-        this.teacher = teacher;
-        this.description = description;
-        this.tags = tags;
-        this.isFree = isFree;
-        this.discount = discount;
-    }
 }

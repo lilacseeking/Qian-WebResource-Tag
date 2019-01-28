@@ -1,7 +1,9 @@
 package org.lilacseeking.Model.PO;
 
 import lombok.Data;
+import lombok.experimental.Accessors;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
@@ -15,6 +17,7 @@ import java.util.UUID;
  */
 @Data
 @MappedSuperclass
+@Accessors(chain = true)
 @EntityListeners(AuditingEntityListener.class)
 public class BaseEntityPO implements Serializable {
 

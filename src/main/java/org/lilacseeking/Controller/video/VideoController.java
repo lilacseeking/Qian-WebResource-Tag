@@ -2,16 +2,23 @@ package org.lilacseeking.Controller.video;
 
 import com.querydsl.jpa.JPAQueryBase;
 import com.querydsl.jpa.impl.JPAQuery;
-import org.lilacseeking.Model.DTO.VideoClassDTO;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import org.lilacseeking.Model.DTO.VideoContentDTO;
+import org.lilacseeking.Model.DTO.VideoCourseDTO;
+import org.lilacseeking.Model.PO.VideoContentPO;
 import org.lilacseeking.Model.PO.VideoCoursePO;
-import org.lilacseeking.Service.video.VideoClassService;
+import org.lilacseeking.Service.video.VideoContentService;
+import org.lilacseeking.Service.video.VideoCourseService;
+import org.lilacseeking.Utils.BeanCopyUtil;
 import org.lilacseeking.Utils.ResponseUtil;
+import org.lilacseeking.Utils.UploadUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -21,29 +28,28 @@ import java.util.List;
  */
 @RestController
 @RequestMapping(value = "/video")
+@Api(value = "课程")
 public class VideoController {
 
     @Autowired
-    private VideoClassService videoClassService;
+    private VideoCourseService videoCourseService;
 
     @Autowired
     private ResponseUtil responseUtil;
 
+    @Autowired
+    private VideoContentService videoContentService;
+
     /**
      * 创建课程
-     * @param videoClassDTO
+     * @param videoCourseDTO
      * @param response
      */
-    @RequestMapping(value = "/addVideoClass")
-    public void AddVideoClass(@RequestBody VideoClassDTO videoClassDTO, HttpServletResponse response){
-        VideoCoursePO videoCoursePO = null;
-        try {
-            videoCoursePO = new VideoCoursePO(videoClassDTO);
-            videoCoursePO = videoClassService.addVideoClass(videoCoursePO);
-
-        }catch (Exception e){
-            e.printStackTrace();
-        }
+    @RequestMapping(value = "/addVideoClass",method = RequestMethod.POST)
+    @ApiOperation(value = "创建课程")
+    public void AddVideoClass(@RequestBody VideoCourseDTO videoCourseDTO, HttpServletResponse response){
+        VideoCoursePO videoCoursePO = VideoCoursePO.builder().build();
+        videoCoursePO = videoCourseService.addVideoClass(videoCoursePO);
         responseUtil.putSuccess(videoCoursePO);
         responseUtil.writeMessage(response);
     }
@@ -57,5 +63,32 @@ public class VideoController {
         JPAQueryBase query = new JPAQuery<>();
 
         return null;
+    }
+
+    @RequestMapping(value = "/addVideoContent",method = RequestMethod.POST)
+    @ApiOperation(value = "创建课程")
+    public void addVideoContent(@RequestBody VideoContentDTO videoContentDTO, HttpServletResponse response){
+        VideoContentPO videoContentPO = VideoContentPO.builder().build();
+        BeanCopyUtil.copyPropertiesIgnoreNull(videoContentDTO,videoContentPO);
+        VideoContentPO videoContent = videoContentService.addVideoContent(videoContentPO);
+        responseUtil.putSuccess(videoContent);
+        responseUtil.writeMessage(response);
+    }
+
+    /**
+     * 课程文件上传
+     * @param classVideo
+     * @param classThumbnail
+     * @param response
+     */
+    @RequestMapping(value = "/uploadVideoClass",method = RequestMethod.POST)
+    @ApiOperation(value = "上传视频")
+    public void uploadVideoClass(MultipartFile classVideo,MultipartFile classThumbnail,HttpServletResponse response){
+        try {
+            UploadUtils.uploadFileStream(classVideo.getInputStream());
+            UploadUtils.uploadFileStream(classThumbnail.getInputStream());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

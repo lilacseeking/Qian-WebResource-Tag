@@ -10,8 +10,9 @@ import org.lilacseeking.Eumns.ErrorCodeEumn;
 import org.lilacseeking.Eumns.SmsTemltateEnum;
 import org.lilacseeking.Exception.BusinessException;
 import org.lilacseeking.Model.DTO.LoginDTO;
+import org.lilacseeking.Model.DTO.RegisterDTO;
 import org.lilacseeking.Model.PO.UserPO;
-import org.lilacseeking.Model.VO.UserInfoVO;
+import org.lilacseeking.Model.VO.UserBasicInfoDTO;
 import org.lilacseeking.Service.RedisService;
 import org.lilacseeking.Service.UserService;
 import org.lilacseeking.Utils.*;
@@ -32,6 +33,12 @@ public class UserServiceImpl implements UserService {
     @Autowired
     ConstantProperties constantProperties;
 
+    /**
+     * 分页查查询所有用户
+     * @param params
+     * @return
+     * @throws ParseException
+     */
     public Page listAllUser(String params) throws ParseException {
         JSONObject value = JSONObject.parseObject(params).getJSONObject("params");
         int rows = Integer.valueOf(value.getString("rows"));
@@ -44,39 +51,43 @@ public class UserServiceImpl implements UserService {
     }
 
     /**
-     *
-     * @param userPO
+     * 用户注册
+     * @param registerDTO
      * @return
      */
-    public UserPO register(UserPO userPO){
+    public UserBasicInfoDTO register(RegisterDTO registerDTO){
+        UserPO userPO = UserPO.builder().build();
+        BeanCopyUtil.copyPropertiesIgnoreNull(registerDTO,userPO);
         //密码加密
         userPO.setPassword(MD5Util.MD5(userPO.getPassword()));
         userPO.setYanzhi(StringUtil.getRandomString(12));
 //        密码加密
 //        持久化数据
-
-        return userRepository.saveOrUpdate(userPO);
+        UserPO result = userRepository.saveOrUpdate(userPO);
+        UserBasicInfoDTO userBasicInfoDTO = UserBasicInfoDTO.builder().build();
+        BeanCopyUtil.copyPropertiesIgnoreNull(result,userBasicInfoDTO);
+        return userBasicInfoDTO;
     }
 
     /**
      * 用户密码登录
-     * @param userPO
+     * @param loginDTO
      * @return
      * @throws BusinessException
      */
-    public UserInfoVO loginByPwd(UserPO userPO) throws BusinessException {
-        if (StringUtils.isBlank(userPO.getMobile())){
+    public UserBasicInfoDTO loginByPwd(LoginDTO loginDTO){
+        if (StringUtils.isBlank(loginDTO.getMobile())){
             throw new BusinessException(ErrorCodeEumn.MOBILE_NOT_NULL.getName());
         }
-        UserPO userPOByMobile = userRepository.getUserPOByMobile(userPO.getMobile());
-        if (!MD5Util.MD5(userPO.getPassword()).equals(userPOByMobile.getPassword())){
+        UserPO userPOByMobile = userRepository.getUserPOByMobile(loginDTO.getMobile());
+        if (!MD5Util.MD5(loginDTO.getPassword()).equals(userPOByMobile.getPassword())){
             throw new BusinessException(ErrorCodeEumn.PASSWORD_NOT_CORRECT.getName());
         }
         // 保存用户信息token
-        UserInfoVO userInfoVO = new UserInfoVO();
-        BeanCopyUtil.copyPropertiesIgnoreNull(userPO,userInfoVO);
-        userInfoVO = redisService.saveUserToken(userInfoVO);
-        return userInfoVO;
+        UserBasicInfoDTO userBasicInfoDTO = UserBasicInfoDTO.builder().build();
+        BeanCopyUtil.copyPropertiesIgnoreNull(loginDTO, userBasicInfoDTO);
+        userBasicInfoDTO = redisService.saveUserToken(userBasicInfoDTO);
+        return userBasicInfoDTO;
     }
 
     /**
@@ -103,7 +114,7 @@ public class UserServiceImpl implements UserService {
      * @param loginDTO
      * @return
      */
-    public UserInfoVO mobileLogin(LoginDTO loginDTO){
+    public UserBasicInfoDTO mobileLogin(LoginDTO loginDTO){
         String smsCode = redisService.getSmsCode(loginDTO.getMobile());
         // 验证验证码输入是否正确
         if (!loginDTO.getVerifyCode().equals(smsCode)){
@@ -115,33 +126,35 @@ public class UserServiceImpl implements UserService {
         // 保存session
 
         // 保存用户信息token
-        UserInfoVO userInfoVO = new UserInfoVO();
-        BeanCopyUtil.copyPropertiesIgnoreNull(userPO,userInfoVO);
-        userInfoVO = redisService.saveUserToken(userInfoVO);
-        return userInfoVO;
+        UserBasicInfoDTO userBasicInfoDTO = UserBasicInfoDTO.builder().build();
+        BeanCopyUtil.copyPropertiesIgnoreNull(userPO, userBasicInfoDTO);
+        userBasicInfoDTO = redisService.saveUserToken(userBasicInfoDTO);
+        return userBasicInfoDTO;
     }
     /**
      * 修改密码 and 重置密码
-     * @param userPO
-     * @param pwd 新密码
+     * @param loginDTO 里含有新旧密码
      * @return
      * @throws BusinessException
      */
-    public UserPO resetPassword(UserPO userPO,String pwd) throws BusinessException {
+    public UserBasicInfoDTO resetPassword(LoginDTO loginDTO) throws BusinessException {
         // 参数校验
-        if (StringUtils.isBlank(userPO.getMobile())){
+        if (StringUtils.isBlank(loginDTO.getMobile())){
             throw new BusinessException(ErrorCodeEumn.MOBILE_NOT_NULL.getName());
         }
-        if (StringUtils.isBlank(pwd)){
+        if (StringUtils.isBlank(loginDTO.getNewPassword())){
             throw new BusinessException(ErrorCodeEumn.NEW_PASSWORD_NOT_NULL.getName());
         }
         //查找该用户信息
-        UserPO userPOByMobile = userRepository.getUserPOByMobile(userPO.getMobile());
-        if (!MD5Util.MD5(userPO.getPassword()).equals(userPOByMobile.getPassword())){
+        UserPO userPOByMobile = userRepository.getUserPOByMobile(loginDTO.getMobile());
+        if (!MD5Util.MD5(loginDTO.getPassword()).equals(userPOByMobile.getPassword())){
             throw new BusinessException(ErrorCodeEumn.PASSWORD_NOT_CORRECT.getName());
         }
-        userPOByMobile.setPassword(MD5Util.MD5(pwd));
-        return userRepository.saveOrUpdate(userPOByMobile);
+        userPOByMobile.setPassword(MD5Util.MD5(loginDTO.getNewPassword()));
+        UserPO userPO = userRepository.saveOrUpdate(userPOByMobile);
+        UserBasicInfoDTO userBasicInfoDTO = UserBasicInfoDTO.builder().build();
+        BeanCopyUtil.copyPropertiesIgnoreNull(userPO,userBasicInfoDTO);
+        return userBasicInfoDTO;
     }
 
     /**

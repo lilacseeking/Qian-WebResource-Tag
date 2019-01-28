@@ -2,8 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26f21b6b-f762-4adb-b8e6-6a5d8c34004d" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Dao/video/VideoContentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Eumns/YesOrNoEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/DTO/UserDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/DTO/VideoContentDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Service/Impl/video/VideoContentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Service/video/VideoContentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Utils/UploadUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Controller/CommonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Controller/CommonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Controller/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Controller/user/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Controller/video/VideoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Controller/video/VideoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Dao/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Dao/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Dao/video/VideoClassRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Dao/video/VideoCourseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/DTO/VideoClassDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/BaseEntityPO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/BaseEntityPO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/CourseChatPO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/CourseChatPO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/CourseUserPO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/CourseUserPO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/FriendList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/FriendList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/PPTPO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/PPTPO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/TeacherPO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/TeacherPO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/UserPO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/UserPO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/VideoContentPO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/VideoContentPO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/VideoCoursePO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/VideoCoursePO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/VO/UserInfoVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/VO/UserBasicInfoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Service/Impl/RedisServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Service/Impl/RedisServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Service/Impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Service/Impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Service/Impl/video/VideoClassServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Service/Impl/video/VideoCourseServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Service/RedisService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Service/RedisService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Service/video/VideoClassService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Service/video/VideoCourseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Utils/OSSUtilTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lilacseeking/Utils/OSSUtilTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/banner.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/banner.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/芊芊学堂API文档.md" beforeDir="false" afterPath="$PROJECT_DIR$/芊芊学堂API文档.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -36,53 +67,54 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="settings.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/settings.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <file leaf-file-name="VideoController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Controller/video/VideoController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="703">
-              <caret line="208" column="21" selection-start-line="192" selection-start-column="8" selection-end-line="208" selection-end-column="21" />
+            <state relative-caret-position="329">
+              <caret line="66" selection-start-line="66" selection-end-line="66" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VideoClassRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Dao/video/VideoClassRepository.java">
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Controller/user/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+            <state relative-caret-position="1035">
+              <caret line="58" column="44" selection-start-line="58" selection-start-column="44" selection-end-line="58" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserRepository.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Dao/UserRepository.java">
+      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Service/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="85" column="9" selection-start-line="85" selection-start-column="9" selection-end-line="85" selection-end-column="9" />
+            <state relative-caret-position="421">
+              <caret line="58" column="11" selection-start-line="58" selection-start-column="11" selection-end-line="58" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserPO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/UserPO.java">
+      <file leaf-file-name="RegisterDTO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/DTO/RegisterDTO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="22" column="19" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="19" />
+            <state relative-caret-position="253">
+              <caret line="13" column="24" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VideoContentPO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/VideoContentPO.java">
+      <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Service/Impl/UserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="1058">
+              <caret line="114" column="14" selection-start-line="114" selection-start-column="14" selection-end-line="114" selection-end-column="14" />
+              <folding>
+                <element signature="e#5382#5383#0" expanded="true" />
+                <element signature="e#5409#5410#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -90,26 +122,47 @@
       <file leaf-file-name="FriendList.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/FriendList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
+            <state relative-caret-position="195">
               <caret line="17" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PPTPO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/PPTPO.java">
+      <file leaf-file-name="BaseEntityPO.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/BaseEntityPO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="207">
+              <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VideoCoursePO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/VideoCoursePO.java">
+      <file leaf-file-name="LoginDTO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/DTO/LoginDTO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="950">
-              <caret line="55" selection-start-line="55" selection-end-line="55" />
+            <state relative-caret-position="230">
+              <caret line="12" column="21" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommonController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Controller/CommonController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-29">
+              <caret line="57" column="50" selection-start-line="57" selection-start-column="50" selection-end-line="57" selection-end-column="50" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Controller/MainController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -120,9 +173,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit3 Test Class" />
-        <option value="Interface" />
         <option value="JUnit4 Test Class" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -160,22 +213,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Test/UserRegisterTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Utils/StringUtil.java" />
-        <option value="$PROJECT_DIR$/API文档.md" />
-        <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Utils/RandomValueUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Test/ASync/ASyncUserRegister.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Configuration/ThreadPoolConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Utils/MD5Util.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/DTO/ResetPwdDTO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Utils/Red5Util.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Configuration/CustomCORSConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/main/test/org/lilacseeking/Service/Impl/RedisServiceImplTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Configuration/RedisCacheConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Configuration/RedissonProperties.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Configuration/RedissonConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/DTO/LoginDTO.java" />
-        <option value="$PROJECT_DIR$/src/main/test/org/lilacseeking/Service/Impl/UserServiceImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Utils/SmsDemo.java" />
         <option value="$PROJECT_DIR$/src/main/test/org/lilacseeking/Test/UserTestTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Test/UserTest.java" />
@@ -184,33 +221,49 @@
         <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Exception/CommonExceptionHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Eumns/SmsTemltateEnum.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Utils/OSSUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Utils/OSSUtilTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Configuration/OssConfigProperties.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Configuration/SmsConfigProperties.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Configuration/ConstantConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Utils/SmsUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Configuration/ConstantProperties.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Eumns/ErrorCodeEumn.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/VO/UserInfoVO.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Service/RedisService.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Utils/BeanUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/ThinkApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Utils/SessionUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Service/Impl/RedisServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/UserPO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Service/ParamsService.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Service/VideoCourseService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Service/VideoClassService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Dao/video/VideoCourseRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Dao/UserRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/banner.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Service/video/VideoContentService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Dao/video/VideoContentRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/DTO/VideoCourseDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/DTO/VideoContentDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Eumns/YesOrNoEnums.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Utils/UploadUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Utils/OSSUtilTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/VideoContentPO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Service/Impl/video/VideoContentServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/CourseChatPO.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/CourseUserPO.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/FriendList.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/PPTPO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/VideoContentPO.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/TeacherPO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Controller/user/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/VideoCoursePO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/DTO/UserDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/UserPO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/VO/UserInfoVO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/VO/UserBasicInfoDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Controller/CommonController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Service/ParamsService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Controller/video/VideoController.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Service/Impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Dao/UserRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Controller/user/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/BaseEntityPO.java" />
       </list>
     </option>
   </component>
@@ -248,9 +301,9 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1837" />
-    <option name="y" value="-14" />
-    <option name="width" value="1936" />
+    <option name="x" value="427" />
+    <option name="y" value="35" />
+    <option name="width" value="1290" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -261,8 +314,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -303,7 +357,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="lilacseeking" type="462c0819:PsiDirectoryNode" />
-              <item name="Dao" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Qian-WebResource" type="b2602c69:ProjectViewProjectNode" />
@@ -312,7 +366,17 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="lilacseeking" type="462c0819:PsiDirectoryNode" />
-              <item name="Dao" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Qian-WebResource" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Qian-WebResource" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lilacseeking" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
               <item name="video" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -332,13 +396,48 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="lilacseeking" type="462c0819:PsiDirectoryNode" />
               <item name="Model" type="462c0819:PsiDirectoryNode" />
+              <item name="DTO" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Qian-WebResource" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Qian-WebResource" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lilacseeking" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
               <item name="PO" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Qian-WebResource" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Qian-WebResource" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lilacseeking" type="462c0819:PsiDirectoryNode" />
+              <item name="Service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Qian-WebResource" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Qian-WebResource" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lilacseeking" type="462c0819:PsiDirectoryNode" />
+              <item name="Service" type="462c0819:PsiDirectoryNode" />
+              <item name="Impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Qian-WebResource" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Qian-WebResource" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -607,6 +706,12 @@
       <workItem from="1542268565498" duration="4876000" />
       <workItem from="1542987500833" duration="679000" />
       <workItem from="1543637541365" duration="1151000" />
+      <workItem from="1543923650114" duration="967000" />
+      <workItem from="1544616230389" duration="1644000" />
+      <workItem from="1545049165713" duration="9530000" />
+      <workItem from="1545557464503" duration="1648000" />
+      <workItem from="1546440000159" duration="226000" />
+      <workItem from="1548573671436" duration="7364000" />
     </task>
     <servers />
   </component>
@@ -643,15 +748,15 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="279970000" />
+    <option name="totallyTimeSpent" value="301390000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50226927" side_tool="true" weight="0.3970346" />
-      <window_info anchor="right" id="Maven Projects" order="16" visible="true" weight="0.16471216" />
+      <window_info anchor="right" id="Maven Projects" order="16" weight="0.21321961" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Designer" order="2" />
@@ -659,28 +764,28 @@
       <window_info id="Structure" order="1" sideWeight="0.50272626" side_tool="true" weight="0.26172706" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4977307" weight="0.51581246" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4977307" weight="0.68861026" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.45141065" />
       <window_info anchor="right" id="Palette&#9;" order="11" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="10" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.33877996" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4242094" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5047022" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.45872518" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49673203" visible="true" weight="0.19722815" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.43678162" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49673203" visible="true" weight="0.195629" />
       <window_info anchor="right" id="Bean Validation" order="14" weight="0.32942432" />
       <window_info id="Web" order="6" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="13" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.4940022" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.24962178" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32279173" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3218391" />
     </layout>
     <layout-to-restore>
       <window_info id="Designer" order="2" />
@@ -759,7 +864,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="49" />
+      <option name="time" value="50" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="SpringBootApplicationConfigurationType">
@@ -823,89 +928,10 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/settings.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1102">
-          <caret line="58" column="11" selection-start-line="58" selection-start-column="11" selection-end-line="58" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Controller/CommonController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="893">
-          <caret line="64" column="48" selection-start-line="64" selection-start-column="48" selection-end-line="64" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Controller/user/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="988">
-          <caret line="65" column="38" selection-start-line="65" selection-start-column="38" selection-end-line="65" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/TeacherPO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/VideoContentPO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/FriendList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/PPTPO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/VideoCoursePO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="950">
           <caret line="55" selection-start-line="55" selection-end-line="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4389">
-          <caret line="231" column="12" lean-forward="true" selection-start-line="231" selection-start-column="12" selection-end-line="231" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Service/Impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2546">
-          <caret line="134" column="38" selection-start-line="134" selection-start-column="38" selection-end-line="134" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -916,192 +942,334 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="931">
-          <caret line="58" column="11" selection-start-line="58" selection-start-column="11" selection-end-line="58" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Controller/CommonController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="893">
-          <caret line="64" column="48" selection-start-line="64" selection-start-column="48" selection-end-line="64" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Controller/user/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="988">
-          <caret line="65" column="38" selection-start-line="65" selection-start-column="38" selection-end-line="65" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/TeacherPO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/VideoContentPO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/FriendList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/PPTPO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/VideoCoursePO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="950">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Service/Impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="134" column="38" selection-start-line="134" selection-start-column="38" selection-end-line="134" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Service/ParamsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="931">
-          <caret line="58" column="11" selection-start-line="58" selection-start-column="11" selection-end-line="58" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Controller/CommonController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="893">
-          <caret line="64" column="48" selection-start-line="64" selection-start-column="48" selection-end-line="64" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Controller/user/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="988">
-          <caret line="65" column="38" selection-start-line="65" selection-start-column="38" selection-end-line="65" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/TeacherPO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/VideoContentPO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/FriendList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/PPTPO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/VideoCoursePO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="950">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/settings.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    <entry file="file://$PROJECT_DIR$/target/generated-sources/java/org/lilacseeking/Model/PO/QUserPO.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Service/VideoCourseService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Service/VideoClassService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Dao/video/VideoCourseRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="208" column="21" selection-start-line="192" selection-start-column="8" selection-end-line="208" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Dao/video/VideoClassRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/UserPO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="22" column="19" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/generated-sources/java/org/lilacseeking/Model/PO/QUserPO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="19" column="31" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="31" />
+        <state relative-caret-position="345">
+          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Dao/UserRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="85" column="9" selection-start-line="85" selection-start-column="9" selection-end-line="85" selection-end-column="9" />
+        <state relative-caret-position="253">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/banner.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="25" column="68" lean-forward="true" selection-start-line="25" selection-start-column="68" selection-end-line="25" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Utils/ResponseUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2724">
+          <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Eumns/ErrorCodeEumn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="759">
+          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Eumns/YesOrNoEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/generated-sources/java/org/lilacseeking/Model/PO/QVideoCoursePO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="15" column="51" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Maven/repository/org/aspectj/aspectjweaver/1.8.13/aspectjweaver-1.8.13.jar!/org/aspectj/lang/annotation/After.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Utils/UploadUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Utils/OSSUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2392">
+          <caret line="110" column="25" selection-start-line="110" selection-start-column="25" selection-end-line="110" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Maven/repository/com/aliyun/oss/aliyun-sdk-oss/2.8.3/aliyun-sdk-oss-2.8.3.jar!/com/aliyun/oss/OSSClient.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5451">
+          <caret line="394" column="40" selection-start-line="394" selection-start-column="40" selection-end-line="394" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Maven/repository/com/aliyun/oss/aliyun-sdk-oss/2.8.3/aliyun-sdk-oss-2.8.3.jar!/com/aliyun/oss/internal/OSSObjectOperation.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="74" column="27" selection-start-line="74" selection-start-column="27" selection-end-line="74" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="828">
+          <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Maven/repository/com/aliyun/oss/aliyun-sdk-oss/2.8.3/aliyun-sdk-oss-2.8.3.pom">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Utils/OSSUtilTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Service/RedisService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Maven/repository/org/projectlombok/lombok/1.16.20/lombok-1.16.20.jar!/lombok/Data.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Dao/video/VideoContentRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/DTO/VideoContentDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="858">
+          <caret line="40" column="25" lean-forward="true" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/VideoCoursePO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="57" column="33" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/VideoContentPO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="17" selection-start-line="17" selection-end-line="18" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/TeacherPO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/PPTPO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/CourseChatPO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Service/Impl/RedisServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-361">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Service/Impl/video/VideoContentServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="27" column="67" lean-forward="true" selection-start-line="27" selection-start-column="67" selection-end-line="27" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Service/Impl/video/VideoCourseServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="25" column="44" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Service/video/VideoContentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Service/video/VideoCourseService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/CourseUserPO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/DTO/VideoCourseDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="16" column="11" lean-forward="true" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/DTO/UserDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="16" column="20" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/UserPO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="592">
+          <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Utils/MD5Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="531">
+          <caret line="58" column="30" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/VO/UserBasicInfoDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Controller/CommonController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-29">
+          <caret line="57" column="50" selection-start-line="57" selection-start-column="50" selection-end-line="57" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Controller/video/VideoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/DTO/RegisterDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="13" column="24" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/DTO/LoginDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="12" column="21" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="58" column="11" selection-start-line="58" selection-start-column="11" selection-end-line="58" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Controller/user/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1035">
+          <caret line="58" column="44" selection-start-line="58" selection-start-column="44" selection-end-line="58" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Service/Impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1058">
+          <caret line="114" column="14" selection-start-line="114" selection-start-column="14" selection-end-line="114" selection-end-column="14" />
+          <folding>
+            <element signature="e#5382#5383#0" expanded="true" />
+            <element signature="e#5409#5410#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/FriendList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/lilacseeking/Model/PO/BaseEntityPO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
         </state>
       </provider>
     </entry>

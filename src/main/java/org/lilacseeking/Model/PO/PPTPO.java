@@ -1,6 +1,8 @@
 package org.lilacseeking.Model.PO;
 
+import lombok.Builder;
 import lombok.Data;
+import lombok.experimental.Accessors;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -13,6 +15,8 @@ import javax.persistence.Table;
  * 首页显示的轮播图设置
  */
 @Data
+@Builder
+@Accessors(chain = true)
 @Entity
 @Table(name = "ppt")
 public class PPTPO extends BaseEntityPO {
